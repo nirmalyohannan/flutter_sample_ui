@@ -23,30 +23,32 @@ class HomeScreen extends StatelessWidget {
       ),
       backgroundColor: AppColors.screenBgColor,
       body: SafeArea(
-          child: Padding(
-        padding: const EdgeInsets.all(10),
-        child: Column(
-          children: [
-            const Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Hello, Dipak👋',
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+          child: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(10),
+          child: Column(
+            children: [
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Hello, Dipak👋',
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                ),
               ),
-            ),
-            UIConstants.gapHeight10,
-            Image.asset(AppAssets.banner1),
-            UIConstants.gapHeight20,
-            const PlayNowBanner(
-              title: "Play Ludo and Earn Money",
-              bannerImage: AppAssets.banner2,
-            ),
-            UIConstants.gapHeight20,
-            const PlayNowBanner(
-              title: "Play Ludo and Earn Money",
-              bannerImage: AppAssets.banner3,
-            ),
-          ],
+              UIConstants.gapHeight10,
+              Image.asset(AppAssets.banner1),
+              UIConstants.gapHeight20,
+              const PlayNowBanner(
+                title: "Play Ludo and Earn Money",
+                bannerImage: AppAssets.banner2,
+              ),
+              UIConstants.gapHeight20,
+              const PlayNowBanner(
+                title: "Play Ludo and Earn Money",
+                bannerImage: AppAssets.banner3,
+              ),
+            ],
+          ),
         ),
       )),
     );
