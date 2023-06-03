@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class UIConstants {
   static final borderRadius10 = BorderRadius.circular(10);
   static final borderRadius20 = BorderRadius.circular(20);
+  static final borderRadiusCircular = BorderRadius.circular(1000);
   //-------------
   static const gapHeight10 = SizedBox(height: 10);
   static const gapHeight20 = SizedBox(height: 20);

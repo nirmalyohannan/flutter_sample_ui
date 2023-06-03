@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:unibit_ui/config/app_assets.dart';
 import 'package:unibit_ui/config/app_colors.dart';
+import 'package:unibit_ui/screens/home_screen/home_screen.dart';
+import 'package:unibit_ui/screens/main_screen/main_screen.dart';
 import 'package:unibit_ui/utils/ui_constants.dart';
 import 'package:unibit_ui/utils/widgets/gradient_elevated_button.dart';
 
@@ -69,12 +71,15 @@ class LoginScreen extends StatelessWidget {
                       ),
                       //
                       GradientElevatedButton(
-                          buttonText: 'Login',
-                          onPressed: () {},
-                          gradientColors: const [
-                            Color.fromARGB(255, 255, 196, 140),
-                            AppColors.primaryColor
-                          ]),
+                        buttonText: 'Login',
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              CupertinoPageRoute(
+                                builder: (context) => const MainScreen(),
+                              ));
+                        },
+                      ),
                       UIConstants.gapHeight20,
                       GradientElevatedButton(
                           buttonText: 'Login with OTP',
